@@ -49,16 +49,16 @@ export default function RootLayout({
 			<head />
 			<body
 				className={clsx(
-					"min-h-screen bg-background font-sans antialiased",
+					"font-sans antialiased",
 					fontSans.variable
 				)}
 			>
 				<Providers themeProps={{ attribute: "class" }}>
-					<div className="relative flex flex-col h-screen">
+					<div className="w-full max-w-full max-h-full h-full relative">
 						<Navbar />
-						<main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+						<div className="relative">
 							{children}
-						</main>
+						</div>
 						<footer className="w-full flex items-center justify-center py-3">
 							<Link
 								isExternal

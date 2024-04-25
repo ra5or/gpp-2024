@@ -1,51 +1,35 @@
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code"
-import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+import { HeroImage } from "@/components/hero-image";
+import backgroundImage from "@/assets/solar-power-plant-2.webp";
+import { siteConfig, SiteConfig } from "@/config/site";
+import { BannerArgs, FeatureBanner } from "@/components/feature-banner";
+import imageSource1 from '@/assets/feature-banner-1.svg';
+import imageSource2 from '@/assets/feature-banner-1-image-2.svg';
 
 export default function Home() {
+	const alt1 = "foo";
+	const text1 = "bar";
+	const featureBanner1Params : BannerArgs = {
+		imageSource: imageSource1,
+		secondImageSource: imageSource2,
+		titleText: "Sole Pre-Recorded Video Interview With Each CV Submission",
+		descriptionText: "Time saver for internal HR & speeds time to hire by 70%. Saves the HR team time by eliminating the need for 1st round interview",
+		alt: "Business Webinar",
+		secondAlt: "Power Lines"
+	}
 	return (
-		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-			<div className="inline-block max-w-lg text-center justify-center">
-				<h1 className={title()}>Make&nbsp;</h1>
-				<h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
-				<br />
-				<h1 className={title()}>
-					websites regardless of your design experience.
-				</h1>
-				<h2 className={subtitle({ class: "mt-4" })}>
-					Beautiful, fast and modern React UI library.
-				</h2>
+		<div>
+			<HeroImage 
+				source={backgroundImage} 
+				mainText="GPP Recruitment"
+				subText="Continuously Improving Our Client Human Capital" 
+				alt="Solar Power Plant"
+			/>
+			<div className="relative">
+				<FeatureBanner
+					key={0}
+					{...featureBanner1Params}
+				/>
 			</div>
-
-			<div className="flex gap-3">
-				<Link
-					isExternal
-					href={siteConfig.links.docs}
-					className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}
-				>
-					Documentation
-				</Link>
-				<Link
-					isExternal
-					className={buttonStyles({ variant: "bordered", radius: "full" })}
-					href={siteConfig.links.github}
-				>
-					<GithubIcon size={20} />
-					GitHub
-				</Link>
-			</div>
-
-			<div className="mt-8">
-				<Snippet hideSymbol hideCopyButton variant="flat">
-					<span>
-						Get started by editing <Code color="primary">app/page.tsx</Code>
-					</span>
-				</Snippet>
-			</div>
-		</section>
+		</div>
 	);
 }
