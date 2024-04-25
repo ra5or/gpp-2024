@@ -6,22 +6,23 @@ export interface BannerArgs { imageSource, secondImageSource, alt: string, secon
 
 export const FeatureBanner = async (props) => { 
     const { imageSource, secondImageSource, secondAlt, alt, titleText, descriptionText, reverse = false } : BannerArgs = props;
-    const style = reverse ? "flex flex-row-reverse relative md:top-[-2rem] z-30 w-[100%] md:flex-col" : "flex relative md:flex-row md:top-[-2rem] z-30 w-[100%] flex-col";
+
     return (
-        <div className={style}>
+        <div className={`flex relative md:flex-row${reverse ? "-reverse" : ""}  z-30 w-[100%] shadow-md`}>
                 <Image 
                     src={imageSource}
                     alt={alt}
-                    className="md:w-[45%] sm:w-[100%]"
+                    className="md:w-[35%]"
                 />
-            <div className="relative bottom-0 justify-end flex flex-col md:flex-row md:p-20 p-5">
-                <div className="flex flex-col my-auto gap-5">
+            <div className={`relative justify-end flex gap-1 flex-row${reverse ? "-reverse" : ""}`}>
+                <div className="flex flex-col my-auto gap-5 md:pl-10 p-10">
                     <p className="text-lg font-bold">{titleText}</p>
                     <p>{descriptionText}</p>
                 </div>
                 <Image 
                     src={secondImageSource}
                     alt={secondAlt}
+                    className="hidden md:flex md:w-[30%] md:h-auto"
                 />
             </div>
         </div>

@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
-import { Navbar } from "@/components/navbar";
+import { Navigation } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 
@@ -55,7 +55,7 @@ export default function RootLayout({
 			>
 				<Providers themeProps={{ attribute: "class" }}>
 					<div className="w-full max-w-full max-h-full h-full relative">
-						<Navbar />
+						<Navigation />
 						<div className="relative">
 							{children}
 						</div>
