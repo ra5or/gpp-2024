@@ -2,6 +2,8 @@ import { HeroImage } from "@/components/hero-image";
 import backgroundImage from "@/assets/solar-power-plant-2.webp";
 import { siteConfig, SiteConfig } from "@/config/site";
 import { BannerArgs, FeatureBanner } from "@/components/feature-banner";
+import Image from "next/image";
+import { Card,CardBody,CardHeader } from "@nextui-org/card";
 
 import mainImage1 from '@/assets/feature-banner-1-alt.svg';
 import secondaryImage1 from '@/assets/feature-banner-1-image-2.svg';
@@ -9,6 +11,9 @@ import mainImage2 from '@/assets/feature-banner-2-alt.svg';
 import secondaryImage2 from '@/assets/feature-banner-2-image-2.png';
 import mainImage3 from '@/assets/feature-banner-3-alt.svg';
 import secondaryImage3 from '@/assets/feature-banner-3-image-2.png';
+import ourMarketsMap from '@/assets/our-markets-map.svg';
+import { Input, Textarea } from "@nextui-org/input";
+import { Button } from "@nextui-org/button";
 
 export default function Home() {
 	const featureBanners : BannerArgs[] = [
@@ -59,6 +64,34 @@ export default function Home() {
 					)
 				})
 			}
+			<div className="flex flex-col">
+				<p className="text-4xl text-center font-semibold p-10 text-foreground-600">Our Markets</p>
+				<Image
+					src={ourMarketsMap}
+					alt="Map of Serviced Areas"
+					className="mx-auto"
+				/>
+			</div>
+			<div className="flex justify-center md:p-20 p-5">
+				<Card shadow="none" className="md:w-[40%] md:p-16 drop-shadow-lg w-full p-5">
+					<CardHeader>
+						<div className="flex flex-col font-semibold md:text-xl text-lg">
+							<p className="text-md">Contact Us</p>
+						</div>
+					</CardHeader>
+					<CardBody className="flex gap-3">
+						<Input isClearable size="lg" type="text" variant="underlined" label="Name" />
+						<Input isClearable size="lg" type="email" variant="underlined" label="Email" isRequired />
+						<Input isClearable size="lg" type="tel" variant="underlined" label="Contact Number" />
+						<Textarea
+							variant="underlined"
+							label="Message"
+							minRows={4}
+						/>
+						<Button type="submit" variant="flat" size="lg" className="bg-slide-blue/100 text-menu-color m-5 w-36 mx-0 font-semibold">Submit</Button>
+					</CardBody>
+				</Card>
+			</div>
 		</div>
 	);
 }

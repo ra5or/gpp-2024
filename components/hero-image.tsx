@@ -3,7 +3,7 @@ import { Button } from "@nextui-org/button";
 
 export const HeroImage = (props) => {
     let {source, alt, mainText, subText, showButton = false, buttonText = ""} = props;
-    let buttonContents = showButton && buttonText ? <Button variant="flat" size="lg" className="bg-slide-blue/100 text-menu-color m-5 w-36 mx-auto">{buttonText}</Button> : null;      
+    let buttonContents = showButton && buttonText ? <Button variant="flat" size="lg" className="bg-slide-blue/100 text-menu-color m-5 w-36 mx-auto font-semibold">{buttonText}</Button> : null;      
     return (
         <div className="z-20 max-h-[70vh] overflow-hidden hidden relative md:flex">
             <Image 
