@@ -1,10 +1,8 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
-import { Type } from "typescript";
 
 export interface BannerArgs { imageSource, secondImageSource, alt: string, secondAlt: string, titleText: string, descriptionText: string, reverse?: boolean };
 
-export const FeatureBanner = async (props) => { 
+export const FeatureBanner = (props) => { 
     let { imageSource, secondImageSource, secondAlt, alt, titleText, descriptionText, reverse = false } : BannerArgs = props;
     let outerStyle = !reverse ? "flex relative flex-col md:flex-row z-30 w-[100%] shadow-lg" : "flex relative flex-col md:flex-row-reverse z-30 w-[100%] shadow-lg" 
     let innerStyle =  !reverse ? "relative justify-end flex gap-1 md:flex-row" : "relative justify-end flex gap-1 md:flex-row-reverse";
@@ -28,5 +26,5 @@ export const FeatureBanner = async (props) => {
                 />
             </div>
         </div>
-    )
-}
+    );
+};
