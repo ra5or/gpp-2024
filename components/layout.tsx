@@ -15,7 +15,7 @@ export default function Layout({
 	children: React.ReactNode;
 }) {
 	return (
-				<Providers themeProps={{ attribute: "class" }}>
+				<Providers>
 					<div className="w-full max-w-full max-h-full h-full relative">
 						<Navigation />
 						<div className="relative">
