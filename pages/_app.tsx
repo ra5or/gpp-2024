@@ -8,10 +8,6 @@ export const metadata: Metadata = {
 		default: siteConfig.name,
 		template: `%s - ${siteConfig.name}`,
 	},
-	description: siteConfig.description,
-	themeColor: [
-		{ media: "(prefers-color-scheme: light)", color: "white" }
-	],
 	icons: {
 		icon: [
 			{
@@ -41,7 +37,6 @@ type AppOwnProps = { example: string }
 export default function MyApp({
   Component,
   pageProps,
-  example,
 }: AppProps & AppOwnProps) {
   return (
     <>
