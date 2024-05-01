@@ -29,7 +29,7 @@ export default function Layout({
 								title="nextui.org homepage"
 							>
 								<span className="text-default-600">Powered by</span>
-								<p className="text-primary">NextUI</p>
+								<p>NextUI</p>
 							</Link>
 						</footer>
 					</div>

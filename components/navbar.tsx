@@ -56,20 +56,13 @@ export const Navigation = () => {
 						</div>
 						<div className="md:flex md:justify-self-end gap-10 hidden">
 							{siteConfig.navItems.map((item) => (
-									<NextLink
+									<Link
 										key={item.href}
-										className={clsx(
-											linkStyles(),
-											"data-[active=true]:text-primary data-[active=true]:font-medium",
-											"font-bold",
-											"my-auto",
-											"text-lg",
-											item.menuColor
-										)}
+										className={`font-bold my-auto tex-lg ${item.menuColor}`}
 										href={item.href}
 									>
 									{item.label}
-									</NextLink>
+									</Link>
 							))}
 							<div className="flex pr-10 gap-3">
 								<Link isExternal href={siteConfig.links.discord} aria-label="X">

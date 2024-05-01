@@ -6,17 +6,17 @@ export const siteConfig = {
 		{
 			label: "Employers",
 			href: "/employers",
-			menuColor: "!text-menu-color"
+			menuColor: "text-menu-color"
 		},
 		{
 		label: "Candidates",
 		href: "/candidates",
-		menuColor: "!text-menu-color"
+		menuColor: "text-menu-color"
 		},
 		{
 		label: "Contact Us",
 		href: "/contact",
-		menuColor: "!text-menu-color"
+		menuColor: "text-menu-color"
 		},
 	],
 	links: {
