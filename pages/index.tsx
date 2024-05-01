@@ -1,17 +1,19 @@
+'use client'
+
 import { HeroImage } from "@/components/hero-image";
-import backgroundImage from "@/assets/solar-power-plant-2.webp";
+import backgroundImage from "@/public/assets/solar-power-plant-2.webp";
 import { siteConfig, SiteConfig } from "@/config/site";
 import { BannerArgs, FeatureBanner } from "@/components/feature-banner";
 import Image from "next/image";
 import { Card,CardBody,CardHeader } from "@nextui-org/card";
 
-import mainImage1 from '@/assets/feature-banner-1-alt.svg';
-import secondaryImage1 from '@/assets/feature-banner-1-image-2.svg';
-import mainImage2 from '@/assets/feature-banner-2-alt.svg';
-import secondaryImage2 from '@/assets/feature-banner-2-image-2.png';
-import mainImage3 from '@/assets/feature-banner-3-alt.svg';
-import secondaryImage3 from '@/assets/feature-banner-3-image-2.png';
-import ourMarketsMap from '@/assets/our-markets-map.svg';
+import mainImage1 from '@/public/assets/feature-banner-1-alt.svg';
+import secondaryImage1 from '@/public/assets/feature-banner-1-image-2.svg';
+import mainImage2 from '@/public/assets/feature-banner-2-alt.svg';
+import secondaryImage2 from '@/public/assets/feature-banner-2-image-2.png';
+import mainImage3 from '@/public/assets/feature-banner-3-alt.svg';
+import secondaryImage3 from '@/public/assets/feature-banner-3-image-2.png';
+import ourMarketsMap from '@/public/assets/our-markets-map.svg';
 import { Input, Textarea } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 
@@ -20,8 +22,8 @@ export default function Home() {
 		{
 			imageSource: mainImage1,
 			secondImageSource: secondaryImage1,
-			titleText: "Sole Pre-Recorded Video Interview With Each CV Submission",
-			descriptionText: "Time saver for internal HR & speeds time to hire by 70%. Saves the HR team time by eliminating the need for 1st round interview",
+			titleText: "Flexible Staffing Solutions",
+			descriptionText: "Whether you need permanent, temporary, or contract staff, GPP Recruitment can tailor our services to meet your organization's staffing needs.",
 			alt: "Business Webinar",
 			secondAlt: "Power Lines"
 		},
@@ -57,10 +59,10 @@ export default function Home() {
 				featureBanners.map((args,idx) => {
 					return (
 						<div className="relative" key={idx}>
-							<FeatureBanner
-								{...args}
-							/>
-					</div>
+								<FeatureBanner
+									{...args}
+								/>
+						</div>
 					)
 				})
 			}

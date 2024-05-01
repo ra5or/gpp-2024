@@ -1,6 +1,6 @@
 import * as React from "react";
 import { IconSvgProps } from "@/types";
-import logo from '../assets/gpp-logo-2024.svg';
+import logo from '@/public/assets/gpp-logo-2024.svg';
 import Image from "next/image";
 
 export const Logo: React.FC<IconSvgProps> = ({

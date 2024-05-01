@@ -1,8 +1,7 @@
 import { HeroImage } from "@/components/hero-image";
-import { title } from "@/components/primitives";
-import employersImage from '../../assets/employers-image.webp';
+import employersImage from '@/public/assets/employers-image.webp';
 
-export default function BlogPage() {
+export default function EmployersPage() {
 	return (
 		<HeroImage 
 		source={employersImage} 

@@ -1,5 +1,4 @@
-import { title } from "@/components/primitives";
-import backgroundImage from '../../assets/business-hand-shake.webp';
+import backgroundImage from '@/public/assets/business-hand-shake.webp';
 import { HeroImage } from "@/components/hero-image";
 
 export default function CandidatesPage() {
