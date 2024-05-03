@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Gradient Scroll Bar */
+:root {
+  --gpp-blue: #0FC7F9;
+  --gpp-yellow: #F4D03A;
+  --gpp-green: #5A8432;
+}
 
 /* width */
 ::-webkit-scrollbar {
