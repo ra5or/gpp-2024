@@ -8,26 +8,26 @@ const rowOneFeatureCardArgs: FeatureCardArgs[] = [
   {
     imageSource: "/assets/candidateFeature1.svg",
     altText: "Handshake",
-    cardTitle: "Time Saving",
+    cardTitle: "Fast Hiring Process",
     iconBackgroundColor: "gpp-blue",
     cardDescription:
-      "We reduce time spent searching, sourcing, researching, screening, reference checking and shortlisting for our clients.",
+      "GPP reduce time to hire by using delivery teams and being constantly engaged in the hiring market so when can provide the best candidates in the shortest time.",
   },
   {
     imageSource: "/assets/candidateFeature2.svg",
     altText: "Puzzle Pieces",
-    cardTitle: "Competitive Hiring Process",
+    cardTitle: "Flexible Workforce And Solutions",
     iconBackgroundColor: "gpp-green",
     cardDescription:
-      "We search our candidates from a wider talent pool so that only the best specialist candidates make our shortlist.",
+      "Whether you need a short term fixed or large multi person manpower increase, GPP can provide the technical specialist need to get the job done.",
   },
   {
     imageSource: "/assets/candidateFeature3.svg",
     altText: "ID Cards",
-    cardTitle: "Flexible Solutions",
+    cardTitle: "Large Talent Pool",
     iconBackgroundColor: "gpp-yellow",
     cardDescription:
-      "We work with our clients to offer the best solution for their needs at the time. GPP offers our clients the packages to on engage us on a volume bases, individual hire or retained search service.",
+      "As a power generation & energy specialist, GPP can provide some of the world few and hard to find technical experts to support any technology.",
   },
 ];
 
@@ -35,7 +35,7 @@ const rowTwoFeatureCardArgs: FeatureCardArgs[] = [
   {
     imageSource: "/assets/candidateFeature4.svg",
     altText: "The World",
-    cardTitle: "Time Saving",
+    cardTitle: "International And Expatriate Hire Made Easy",
     iconBackgroundColor: "gpp-blue",
     cardDescription:
       "We reduce time spent searching, sourcing, researching, screening, reference checking and shortlisting for our clients.",
@@ -43,18 +43,18 @@ const rowTwoFeatureCardArgs: FeatureCardArgs[] = [
   {
     imageSource: "/assets/candidateFeature5.svg",
     altText: "Merit Ribbon",
-    cardTitle: "Competitive Hiring Process",
+    cardTitle: "Years of Experience",
     iconBackgroundColor: "gpp-green",
     cardDescription:
-      "We search our candidates from a wider talent pool so that only the best specialist candidates make our shortlist.",
+      "Work with an Account Manager with at least 10 years experience in the international recruitment sector for Power and Oil & Gas.",
   },
   {
     imageSource: "/assets/candidateFeature6.svg",
     altText: "Solution Infographic",
-    cardTitle: "Flexible Solutions",
+    cardTitle: "Flexible Workforce And Solutions",
     iconBackgroundColor: "gpp-yellow",
     cardDescription:
-      "We work with our clients to offer the best solution for their needs at the time. GPP offers our clients the packages to on engage us on a volume bases, individual hire or retained search service.",
+      "Whether you need a short term fixed or large multi person manpower increase, Global Power Projects can provide the technical specialist need to get the job done.",
   },
 ];
 
