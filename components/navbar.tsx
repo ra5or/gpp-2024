@@ -72,7 +72,6 @@ export const Navigation = () => {
 									<LinkedInIcon className="text-menu-color"/>
 								</Link>
 							</div>
-							{/* <ThemeSwitch className="hidden md:flex md:pl-20"/> */}
 						</div>
 					</div>
 				</NavbarContent>
