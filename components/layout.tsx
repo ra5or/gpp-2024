@@ -1,5 +1,5 @@
-import "@/styles/globals.css";
-import { Providers } from "@/app/providers";
+import "@styles/globals.css";
+import { Providers } from "@app/providers";
 import { Navigation } from "./navbar";
 import { LogoAsImage, PhoneIcon, EmailIcon } from "./icons";
 import { FooterColumn, FooterColumnArgs } from "./footer-column";

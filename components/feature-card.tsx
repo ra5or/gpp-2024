@@ -1,6 +1,6 @@
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import Image from "next/image";
-import { GlobalColors } from "@/types";
+import { GlobalColors } from "@types";
 
 export type FeatureCardArgs = {
   altText: string;

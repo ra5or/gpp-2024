@@ -1,7 +1,7 @@
-import { ContactButton } from "@/components/contact-button";
-import { FeatureCard } from "@/components/feature-card";
-import { HeroImage } from "@/components/hero-image";
-import candidatesImage from "@/public/assets/candidates-hero-image.png";
+import { ContactButton } from "@components/contact-button";
+import { FeatureCard } from "@components/feature-card";
+import { HeroImage } from "@components/hero-image";
+import candidatesImage from "@public/assets/candidates-hero-image.png";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import router from "next/router";
 
@@ -52,4 +52,10 @@ export default function CandidatesPage() {
       </Card>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {},
+  };
 }

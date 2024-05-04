@@ -1,7 +1,7 @@
-import { ContactButton } from "@/components/contact-button";
-import { FeatureCard, FeatureCardArgs } from "@/components/feature-card";
-import { HeroImage } from "@/components/hero-image";
-import employersImage from "@/public/assets/employers-image.webp";
+import { ContactButton } from "@components/contact-button";
+import { FeatureCard, FeatureCardArgs } from "@components/feature-card";
+import { HeroImage } from "@components/hero-image";
+import employersImage from "@public/assets/employers-image.webp";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import router from "next/router";
 

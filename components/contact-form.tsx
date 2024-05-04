@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Input, Textarea } from "@nextui-org/input";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
-import contactFormLines from "@/public/assets/contactFormLines.svg";
-import contactFormSecretary from "@/public/assets/contactFormSecretary.png";
+import contactFormLines from "@public/assets/contactFormLines.svg";
+import contactFormSecretary from "@public/assets/contactFormSecretary.png";
 import { ContactButton } from "./contact-button";
 
 export default function ContactForm() {

@@ -1,8 +1,8 @@
-import backgroundImage from "@/public/assets/business-hand-shake.webp";
-import { HeroImage } from "@/components/hero-image";
+import backgroundImage from "@public/assets/business-hand-shake.webp";
+import { HeroImage } from "@components/hero-image";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
-import { ContactButton } from "@/components/contact-button";
-import { FeatureCard, FeatureCardArgs } from "@/components/feature-card";
+import { ContactButton } from "@components/contact-button";
+import { FeatureCard, FeatureCardArgs } from "@components/feature-card";
 import router from "next/router";
 
 const rowOneFeatureCardArgs: FeatureCardArgs[] = [

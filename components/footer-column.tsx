@@ -1,9 +1,9 @@
-import { IconSvgProps } from "@/types";
+import { IconSvgProps } from "@types";
 import Link from "next/link";
 import React from "react";
 import { FunctionComponent } from "react";
-import PhoneIcon from "@/public/assets/PhoneIcon.svg";
-import EmailIcon from "@/public/assets/EmailIcon.svg";
+import PhoneIcon from "@public/assets/PhoneIcon.svg";
+import EmailIcon from "@public/assets/EmailIcon.svg";
 import Image from "next/image";
 
 export type FooterColumnArgs = {

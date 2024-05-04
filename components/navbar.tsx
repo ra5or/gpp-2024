@@ -4,15 +4,11 @@ import { Link } from "@nextui-org/link";
 
 import { link as linkStyles } from "@nextui-org/theme";
 
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@config/site";
 import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 
-import {
-  XSocialMediaIcon,
-  LinkedInIcon,
-  LogoAsImage,
-} from "@/components/icons";
+import { XSocialMediaIcon, LinkedInIcon, LogoAsImage } from "@components/icons";
 import {
   Navbar,
   NavbarBrand,

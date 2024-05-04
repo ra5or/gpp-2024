@@ -1,5 +1,5 @@
-import Layout from "@/components/layout";
-import { siteConfig } from "@/config/site";
+import Layout from "@components/layout";
+import { siteConfig } from "@config/site";
 import { Metadata } from "next";
 import App, { AppContext, AppInitialProps, AppProps } from "next/app";
 

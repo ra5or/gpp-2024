@@ -1,4 +1,4 @@
-import { fontSans } from "@/config/fonts";
+import { fontSans } from "@config/fonts";
 import clsx from "clsx";
 import { Html, Head, Main, NextScript } from "next/document";
 

@@ -1,25 +1,25 @@
 "use client";
 
-import { HeroImage } from "@/components/hero-image";
-import backgroundImage from "@/public/assets/solar-power-plant-2.webp";
-import { siteConfig, SiteConfig } from "@/config/site";
-import { BannerArgs, FeatureBanner } from "@/components/feature-banner";
+import { HeroImage } from "@components/hero-image";
+import backgroundImage from "@public/assets/solar-power-plant-2.webp";
+import { siteConfig, SiteConfig } from "@config/site";
+import { BannerArgs, FeatureBanner } from "@components/feature-banner";
 import Image from "next/image";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
 
-import mainImage1 from "@/public/assets/feature-banner-1-alt.svg";
-import secondaryImage1 from "@/public/assets/feature-banner-1-image-2.svg";
-import mainImage2 from "@/public/assets/feature-banner-2-alt.svg";
-import secondaryImage2 from "@/public/assets/feature-banner-2-image-2.png";
-import mainImage3 from "@/public/assets/feature-banner-3-alt.svg";
-import secondaryImage3 from "@/public/assets/feature-banner-3-image-2.png";
-import ourMarketsMap from "@/public/assets/our-markets-map.svg";
-import contactFormLines from "@/public/assets/contactFormLines.svg";
-import contactFormSecretary from "@/public/assets/contactFormSecretary.png";
+import mainImage1 from "@public/assets/feature-banner-1-alt.svg";
+import secondaryImage1 from "@public/assets/feature-banner-1-image-2.svg";
+import mainImage2 from "@public/assets/feature-banner-2-alt.svg";
+import secondaryImage2 from "@public/assets/feature-banner-2-image-2.png";
+import mainImage3 from "@public/assets/feature-banner-3-alt.svg";
+import secondaryImage3 from "@public/assets/feature-banner-3-image-2.png";
+import ourMarketsMap from "@public/assets/our-markets-map.svg";
+import contactFormLines from "@public/assets/contactFormLines.svg";
+import contactFormSecretary from "@public/assets/contactFormSecretary.png";
 import { Input, Textarea } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
-import { ContactButton } from "@/components/contact-button";
-import ContactForm from "@/components/contact-form";
+import { ContactButton } from "@components/contact-button";
+import ContactForm from "@components/contact-form";
 
 export default function Home() {
   const featureBanners: BannerArgs[] = [
