@@ -26,8 +26,13 @@ export const HeroImage = (props) => {
         className="z-0 relative"
         src={source}
         alt={alt}
-        objectFit="cover"
         priority={true}
+        sizes="100vw"
+        style={{
+          width: "100%",
+          height: "auto",
+          objectFit: "cover",
+        }}
       />
       <div className="flex absolute w-full h-full bg-slide-blue/50 z-20 top-0 bottom-0">
         <div className="relative mx-auto my-auto flex flex-col text-center text-menu-color gap-3 hidden md:block">
