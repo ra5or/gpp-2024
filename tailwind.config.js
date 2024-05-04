@@ -13,21 +13,19 @@ module.exports = {
       colors: {
         "slide-blue": "#0FC7F940",
         "menu-color": "#FFFFFF",
-        "menu-color-dark": "#37435B"
+        "menu-color-dark": "#37435B",
+        "gpp-blue": "#0FC7F9",
+        "gpp-yellow": "#F4D03A",
+        "gpp-green": "#5A8432",
       },
     },
   },
-  darkMode: "class",
   plugins: [
     nextui({
-      layout: {}, 
+      layout: {},
       addCommonColors: true,
       themes: {
         light: {
-          layout: {},
-          colors: {},
-        },
-        dark: {
           layout: {},
           colors: {},
         },
