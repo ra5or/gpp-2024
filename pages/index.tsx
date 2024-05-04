@@ -7,11 +7,11 @@ import { BannerArgs, FeatureBanner } from "@components/feature-banner";
 import Image from "next/image";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
 
-import mainImage1 from "@public/assets/feature-banner-1-alt.svg";
+import mainImage1 from "@public/assets/feature-banner-1-alt.jpg";
 import secondaryImage1 from "@public/assets/feature-banner-1-image-2.svg";
-import mainImage2 from "@public/assets/feature-banner-2-alt.svg";
+import mainImage2 from "@public/assets/feature-banner-2-alt.jpg";
 import secondaryImage2 from "@public/assets/feature-banner-2-image-2.png";
-import mainImage3 from "@public/assets/feature-banner-3-alt.svg";
+import mainImage3 from "@public/assets/feature-banner-3-alt.jpg";
 import secondaryImage3 from "@public/assets/feature-banner-3-image-2.png";
 import ourMarketsMap from "@public/assets/our-markets-map.svg";
 import contactFormLines from "@public/assets/contactFormLines.svg";
