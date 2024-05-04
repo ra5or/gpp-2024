@@ -1,7 +1,7 @@
 import Layout from "@components/layout";
 import { siteConfig } from "@config/site";
 import { Metadata } from "next";
-import App, { AppContext, AppInitialProps, AppProps } from "next/app";
+import { AppProps } from "next/app";
 
 export const metadata: Metadata = {
   title: {
