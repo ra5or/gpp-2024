@@ -118,3 +118,9 @@ export default function CandidatesPage() {
     </div>
   );
 }
+
+export async function getStaticProps() {
+  return {
+    props: {},
+  };
+}

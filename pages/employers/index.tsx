@@ -90,3 +90,9 @@ export default function EmployersPage() {
     </div>
   );
 }
+
+export async function getStaticProps() {
+  return {
+    props: {},
+  };
+}
