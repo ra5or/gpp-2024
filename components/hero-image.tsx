@@ -34,6 +34,7 @@ export const HeroImage = (props) => {
           objectFit: "cover",
         }}
         loading="eager"
+        quality={50}
       />
       <div className="flex absolute w-full h-full bg-slide-blue/50 z-20 top-0 bottom-0">
         <div className="relative mx-auto my-auto flex-col text-center text-menu-color hidden md:flex gap-5">
