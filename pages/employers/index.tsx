@@ -1,33 +1,60 @@
+import backgroundImage from "@/public/assets/business-hand-shake.webp";
+import { HeroImage } from "@/components/hero-image";
+import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import { ContactButton } from "@/components/contact-button";
 import { FeatureCard, FeatureCardArgs } from "@/components/feature-card";
-import { HeroImage } from "@/components/hero-image";
-import employersImage from "@/public/assets/employers-image.webp";
-import { Card, CardBody, CardHeader } from "@nextui-org/card";
 
-const featureCardArgs: FeatureCardArgs[] = [
+const rowOneFeatureCardArgs: FeatureCardArgs[] = [
   {
-    imageSource: "/assets/1.svg",
-    altText: "Number 1",
-    cardTitle: "Time Saving",
+    imageSource: "/assets/candidateFeature1.svg",
+    altText: "Handshake",
+    cardTitle: "Fast Hiring Process",
+    iconBackgroundColor: "gpp-blue",
+    cardDescription:
+      "GPP reduce time to hire by using delivery teams and being constantly engaged in the hiring market so when can provide the best candidates in the shortest time.",
+  },
+  {
+    imageSource: "/assets/candidateFeature2.svg",
+    altText: "Puzzle Pieces",
+    cardTitle: "Flexible Workforce And Solutions",
+    iconBackgroundColor: "gpp-green",
+    cardDescription:
+      "Whether you need a short term fixed or large multi person manpower increase, GPP can provide the technical specialist need to get the job done.",
+  },
+  {
+    imageSource: "/assets/candidateFeature3.svg",
+    altText: "ID Cards",
+    cardTitle: "Large Talent Pool",
+    iconBackgroundColor: "gpp-yellow",
+    cardDescription:
+      "As a power generation & energy specialist, GPP can provide some of the world few and hard to find technical experts to support any technology.",
+  },
+];
+
+const rowTwoFeatureCardArgs: FeatureCardArgs[] = [
+  {
+    imageSource: "/assets/candidateFeature4.svg",
+    altText: "The World",
+    cardTitle: "International And Expatriate Hire Made Easy",
     iconBackgroundColor: "gpp-blue",
     cardDescription:
       "We reduce time spent searching, sourcing, researching, screening, reference checking and shortlisting for our clients.",
   },
   {
-    imageSource: "/assets/2.svg",
-    altText: "Number 3",
-    cardTitle: "Competitive Hiring Process",
+    imageSource: "/assets/candidateFeature5.svg",
+    altText: "Merit Ribbon",
+    cardTitle: "Years of Experience",
     iconBackgroundColor: "gpp-green",
     cardDescription:
-      "We search our candidates from a wider talent pool so that only the best specialist candidates make our shortlist.",
+      "Work with an Account Manager with at least 10 years experience in the international recruitment sector for Power and Oil & Gas.",
   },
   {
-    imageSource: "/assets/3.svg",
-    altText: "Number 3",
-    cardTitle: "Flexible Solutions",
+    imageSource: "/assets/candidateFeature6.svg",
+    altText: "Solution Infographic",
+    cardTitle: "Flexible Workforce And Solutions",
     iconBackgroundColor: "gpp-yellow",
     cardDescription:
-      "We work with our clients to offer the best solution for their needs at the time. GPP offers our clients the packages to on engage us on a volume bases, individual hire or retained search service.",
+      "Whether you need a short term fixed or large multi person manpower increase, Global Power Projects can provide the technical specialist need to get the job done.",
   },
 ];
 
@@ -35,35 +62,36 @@ export default function EmployersPage() {
   return (
     <div>
       <HeroImage
-        source={employersImage}
+        source={backgroundImage}
         mainText="Employers"
         subText="Why Choose Us"
-        alt="Business Handshake Deal"
+        showButton={true}
+        buttonText="Jobs"
+        alt="Business Hand Shake"
       />
       {
         <div className="flex flex-col gap-8">
           <p className="text-center md:py-20 md:px-[15%] p-10 text-lg">
-            GPP Recruitment is an Independent Recruitment Specialist focussed in
-            the Power Generation, Renewable and Energy Industries.
-            <br />
-            <br />
-            The team at GPP understands that success in our business is built on
-            relationships with our candidates and engineers. Our candidate
-            support teams provide the personal support and logistics to our
-            consultants throughout the mobilisation process and during their
-            deployment. Our team members have been personally involved in over
-            5,000 deployments worldwide. This experience gives our consultants a
-            smooth and seamless deployment and the time to focus on what’s
-            important – project delivery.
-          </p>
-          <p className="text-center text-3xl font-semibold">What We Do</p>
-          <p className="text-lg mx-auto text-center md:w-[50%] w-[80%]">
-            GPP Recruitment Consultants understand that getting the right mix of
-            personality, technical background and ambitions are important to
-            making any hire a successful one
+            GPP Recruitment is an independent specialist recruitment company in
+            the Power Generation Industry. Each of our Recruitment Consultants
+            has a minimum of ten years’ experience in the industry giving our
+            clients the best possible access to the industry’s leading engineers
+            and management teams – with exceptional reputations in the market.We
+            spend the time with our clients, to fully understand their project
+            needs and corporate requirements, resulting in our clients receiving
+            the right choice of shortlisted candidates to choose from. Our
+            networks and talent pools are global, so wherever your project is
+            located, GPP can source and deliver candidates from the local or
+            international market place.
           </p>
           <div className="flex md:flex-row flex-col justify-between">
-            {featureCardArgs.map((args, idx) => {
+            {rowOneFeatureCardArgs.map((args, idx) => {
+              // let {imageSource: src, altText: alt, cardTitle } = args;
+              return <FeatureCard key={idx} {...args} />;
+            })}
+          </div>
+          <div className="flex md:flex-row flex-col justify-between">
+            {rowTwoFeatureCardArgs.map((args, idx) => {
               // let {imageSource: src, altText: alt, cardTitle } = args;
               return <FeatureCard key={idx} {...args} />;
             })}

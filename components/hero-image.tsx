@@ -33,9 +33,10 @@ export const HeroImage = (props) => {
           height: "auto",
           objectFit: "cover",
         }}
+        loading="eager"
       />
       <div className="flex absolute w-full h-full bg-slide-blue/50 z-20 top-0 bottom-0">
-        <div className="relative mx-auto my-auto flex flex-col text-center text-menu-color gap-3 hidden md:block">
+        <div className="relative mx-auto my-auto flex-col text-center text-menu-color hidden md:flex gap-5">
           <div className="font-bold text-6xl cursor-default">{mainText}</div>
           <div className="text-2xl font-semibold cursor-default">{subText}</div>
           {buttonContents}

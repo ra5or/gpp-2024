@@ -154,7 +154,7 @@ export const XSocialMediaIcon: React.FC<IconSvgProps> = ({
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        className="fill-white"
+        className={props.color}
         d="M17.857,12.704l11.17,-12.704l-2.646,0l-9.703,11.029l-7.744,-11.029l-8.934,0l11.713,16.679l-11.713,13.321l2.646,0l10.24,-11.649l8.18,11.649l8.934,0m-26.399,-28.048l4.065,0l18.713,26.192l-4.066,-0"
       />
     </svg>
@@ -176,15 +176,15 @@ export const LinkedInIcon: React.FC<IconSvgProps> = ({
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        className="fill-white"
+        className={props.color}
         d="M18 18V12.14C18 9.26 17.38 7.06 14.02 7.06C12.4 7.06 11.32 7.94 10.88 8.78H10.84V7.32H7.65997V18H10.98V12.7C10.98 11.3 11.24 9.96 12.96 9.96C14.66 9.96 14.68 11.54 14.68 12.78V17.98H18V18Z"
       />
       <path
-        className="fill-white"
+        className={props.color}
         d="M2.26001 7.32001H5.58001V18H2.26001V7.32001Z"
       />
       <path
-        className="fill-white"
+        className={props.color}
         d="M3.92 2C2.86 2 2 2.86 2 3.92C2 4.98 2.86 5.86 3.92 5.86C4.98 5.86 5.84 4.98 5.84 3.92C5.84 2.86 4.98 2 3.92 2Z"
       />
     </svg>

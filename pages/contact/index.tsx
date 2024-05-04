@@ -1,7 +1,7 @@
-import { title } from "@/components/primitives";
+import ContactForm from "@/components/contact-form";
 
 export default function ContactPage() {
-  return <h1>Contact Us</h1>;
+  return <ContactForm />;
 }
 
 export async function getStaticProps() {
