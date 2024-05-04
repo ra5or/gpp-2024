@@ -14,6 +14,8 @@ import secondaryImage2 from "@/public/assets/feature-banner-2-image-2.png";
 import mainImage3 from "@/public/assets/feature-banner-3-alt.svg";
 import secondaryImage3 from "@/public/assets/feature-banner-3-image-2.png";
 import ourMarketsMap from "@/public/assets/our-markets-map.svg";
+import contactFormLines from "@/public/assets/contactFormLines.svg";
+import contactFormSecretary from "@/public/assets/contactFormSecretary.png";
 import { Input, Textarea } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import { ContactButton } from "@/components/contact-button";
@@ -79,9 +81,19 @@ export default function Home() {
         />
       </div>
       <div className="flex justify-center md:p-20 p-5">
+        <Image
+          className="relative z-0 top-[-13rem] left-[0.5rem] hidden md:block"
+          src={contactFormLines}
+          alt="Blue Yellow and Green Lines"
+        />
+        <Image
+          className="absolute w-[40rem] z-20 right-[15rem] 2xl:block hidden"
+          src={contactFormSecretary}
+          alt="Secretary holding a clipboard"
+        />
         <Card
           shadow="none"
-          className="md:w-[40%] md:p-16 drop-shadow-lg w-full p-5"
+          className="md:w-[40%] md:p-16 drop-shadow-lg w-full p-5 z-10"
         >
           <CardHeader>
             <div className="flex flex-col font-semibold md:text-xl text-lg">
