@@ -3,6 +3,7 @@ import { FeatureCard, FeatureCardArgs } from "@/components/feature-card";
 import { HeroImage } from "@/components/hero-image";
 import employersImage from "@/public/assets/employers-image.webp";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
+import router from "next/router";
 
 const featureCardArgs: FeatureCardArgs[] = [
   {
@@ -82,6 +83,7 @@ export default function AboutPage() {
                 buttonText="Contact Us"
                 textColor="white"
                 className="mx-auto"
+                clickHandler={() => router.push("/contact")}
               />
             </CardBody>
           </Card>

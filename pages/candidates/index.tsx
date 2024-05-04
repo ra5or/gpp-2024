@@ -1,5 +1,9 @@
+import { ContactButton } from "@/components/contact-button";
+import { FeatureCard } from "@/components/feature-card";
 import { HeroImage } from "@/components/hero-image";
 import candidatesImage from "@/public/assets/candidates-hero-image.png";
+import { Card, CardBody, CardHeader } from "@nextui-org/card";
+import router from "next/router";
 
 export default function CandidatesPage() {
   return (
@@ -28,6 +32,24 @@ export default function CandidatesPage() {
           project delivery.
         </p>
       </div>
+      <Card className="md:w-[60%] w-[80%] p-10 text-center mx-auto">
+        <CardHeader>
+          <p className="text-xl font-bold">
+            We’ve worked with some great companies already. We think you should
+            join them in your quest for top talent.
+          </p>
+        </CardHeader>
+        <CardBody>
+          <ContactButton
+            type="button"
+            bgColor="gpp-blue"
+            buttonText="Contact Us"
+            textColor="white"
+            className="mx-auto"
+            clickHandler={() => router.push("contact")}
+          />
+        </CardBody>
+      </Card>
     </div>
   );
 }

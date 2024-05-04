@@ -1,13 +1,16 @@
 import { GlobalColors } from "@/types";
 import { Button } from "@nextui-org/button";
+import Link from "next/link";
+import router from "next/router";
 
 export type ButtonArgs = {
   type: "button" | "submit" | "reset" | undefined;
   buttonText: string;
-  size?: "lg" | "sm" | "md";
   bgColor?: "gpp-blue" | "gpp-yellow" | "gpp-green";
   textColor?: string;
   className?: string;
+  size?: "lg" | "sm" | "md";
+  clickHandler?: () => void;
 };
 
 export const ContactButton = (props: ButtonArgs) => {
@@ -18,6 +21,7 @@ export const ContactButton = (props: ButtonArgs) => {
     textColor = "white",
     buttonText,
     className,
+    clickHandler,
   } = props;
   let backgroundColor: string =
     GlobalColors.find((x) => x.name === bgColor)?.value ?? "";
@@ -29,6 +33,7 @@ export const ContactButton = (props: ButtonArgs) => {
       size="lg"
       className={`m-5 w-36 mx-0 font-semibold ${className}`}
       style={{ backgroundColor: backgroundColor, color: textColor }}
+      onPress={clickHandler}
     >
       {buttonText}
     </Button>
