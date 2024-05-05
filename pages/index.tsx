@@ -31,6 +31,7 @@ export default function Home() {
         "Whether you need permanent, temporary, or contract staff, GPP Recruitment can tailor our services to meet your organization's staffing needs.",
       alt: "Business Webinar",
       secondAlt: "Power Lines",
+      a,
     },
     {
       imageSource: mainImage2,
