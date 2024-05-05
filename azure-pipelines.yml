@@ -11,22 +11,28 @@ steps:
     inputs:
       version: ">=21.x"
     displayName: "Install Node.js"
-  - script: npm install -G bun
-    displayName: "Install bun.js"
-  - script: |
-      bun install
-      bun run build
-    displayName: "Build the app"
-  - task: CopyFiles@2
-    inputs:
-      SourceFolder: ".next"
-      Contents: "**"
-      TargetFolder: "$(build.artifactstagingdirectory)"
-      CleanTargetFolder: true
-    displayName: "Copy build output to artifact staging directory"
-  - task: PublishBuildArtifacts@1
-    inputs:
-      PathtoPublish: "$(Build.ArtifactStagingDirectory)"
-      ArtifactName: "build_$(Build.SourceBranchName)_$(Build.SourceVersion)"
-      publishLocation: "Container"
-      StoreAsTar: true
+- task: Npm@1
+  displayName: "Install Bun.js"
+  inputs:
+    command: 'custom'
+    customCommand: 'install -g bun'
+    verbose: true
+- bash:
+    bun install
+  displayName: "Install deps"
+- bash:
+    bun run build
+  displayName: "Build the app"
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: ".next"
+    Contents: "**"
+    TargetFolder: "$(build.artifactstagingdirectory)"
+    CleanTargetFolder: true
+  displayName: "Copy build output to artifact staging directory"
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: "$(Build.ArtifactStagingDirectory)"
+    ArtifactName: "build_$(Build.SourceBranchName)_$(Build.SourceVersion)"
+    publishLocation: "Container"
+    StoreAsTar: true
