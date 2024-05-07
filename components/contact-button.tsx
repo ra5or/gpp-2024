@@ -11,6 +11,7 @@ export type ButtonArgs = {
   className?: string;
   size?: "lg" | "sm" | "md";
   clickHandler?: () => void;
+  disabled: boolean;
 };
 
 export const ContactButton = (props: ButtonArgs) => {
@@ -19,6 +20,7 @@ export const ContactButton = (props: ButtonArgs) => {
     size = "lg",
     bgColor = "gpp-blue",
     textColor = "white",
+    disabled = false,
     buttonText,
     className,
     clickHandler,
@@ -34,6 +36,7 @@ export const ContactButton = (props: ButtonArgs) => {
       className={`m-5 w-36 mx-0 font-semibold ${className}`}
       style={{ backgroundColor: backgroundColor, color: textColor }}
       onPress={clickHandler}
+      disabled={disabled}
     >
       {buttonText}
     </Button>

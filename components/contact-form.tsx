@@ -5,7 +5,14 @@ import contactFormLines from "@public/assets/contactFormLines.svg";
 import contactFormSecretary from "@public/assets/contactFormSecretary.png";
 import { ContactButton } from "./contact-button";
 
-export default function ContactForm() {
+export type ContactFormArgs = {
+  shouldDisableButton: boolean;
+};
+
+export default function ContactForm(props: ContactFormArgs) {
+  //added for pre-deployment testing
+  const { shouldDisableButton } = props;
+
   return (
     <div className="flex justify-center md:p-20 p-5">
       <Image
@@ -58,6 +65,7 @@ export default function ContactForm() {
             size="lg"
             className="m-5 w-36 mx-0"
             buttonText="Submit"
+            disabled={shouldDisableButton}
           />
         </CardBody>
       </Card>
