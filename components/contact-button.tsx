@@ -11,7 +11,7 @@ export type ButtonArgs = {
   className?: string;
   size?: "lg" | "sm" | "md";
   clickHandler?: () => void;
-  disabled: boolean;
+  disabled?: boolean;
 };
 
 export const ContactButton = (props: ButtonArgs) => {

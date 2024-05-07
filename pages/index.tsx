@@ -71,7 +71,7 @@ export default function Home() {
           </div>
         );
       })}
-      <ContactForm />
+      <ContactForm shouldDisableButton={true} />
     </div>
   );
 }
