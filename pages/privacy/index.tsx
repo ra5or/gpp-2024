@@ -4,7 +4,9 @@ import React from "react";
 class AccordionContentItem {
   constructor(
     public Title: string = "",
-    public Text: React.FC = (): React.ReactNode => <span></span>
+    public Text: React.FC = () => {
+      return <span></span>;
+    }
   ) {}
 }
 

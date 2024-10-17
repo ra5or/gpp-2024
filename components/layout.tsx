@@ -29,9 +29,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <FooterColumn {...footerColOneArgs} />
             <FooterColumn {...footerColTwoArgs} />
           </div>
-          <div className="flex md:flex-row flex-col w-[70%] md:pl-[20%] pl-[10%] md:gap-20 gap-10">
-            <FooterRow />
-          </div>
+
+          <FooterRow />
         </footer>
       </div>
     </Providers>
