@@ -3,7 +3,7 @@ import { HeroImage } from "@components/hero-image";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import { ContactButton } from "@components/contact-button";
 import { FeatureCard, FeatureCardArgs } from "@components/feature-card";
-import router from "next/router";
+import { useRouter } from "next/navigation";
 
 const rowOneFeatureCardArgs: FeatureCardArgs[] = [
   {
@@ -17,7 +17,7 @@ const rowOneFeatureCardArgs: FeatureCardArgs[] = [
   {
     imageSource: "/assets/candidateFeature2.svg",
     altText: "Puzzle Pieces",
-    cardTitle: "Flexible Workforce And Solutions",
+    cardTitle: "Flexible Staffing Solutions",
     iconBackgroundColor: "gpp-green",
     cardDescription:
       "Whether you need a short term fixed or large multi person manpower increase, GPP can provide the technical specialist need to get the job done.",
@@ -49,17 +49,10 @@ const rowTwoFeatureCardArgs: FeatureCardArgs[] = [
     cardDescription:
       "Work with an Account Manager with at least 10 years experience in the international recruitment sector for Power and Oil & Gas.",
   },
-  {
-    imageSource: "/assets/candidateFeature6.svg",
-    altText: "Solution Infographic",
-    cardTitle: "Flexible Workforce And Solutions",
-    iconBackgroundColor: "gpp-yellow",
-    cardDescription:
-      "Whether you need a short term fixed or large multi person manpower increase, Global Power Projects can provide the technical specialist need to get the job done.",
-  },
 ];
 
 export default function EmployersPage() {
+  const router = useRouter();
   return (
     <div>
       <HeroImage
@@ -67,8 +60,11 @@ export default function EmployersPage() {
         mainText="Employers"
         subText="Why Choose Us"
         showButton={true}
-        buttonText="Jobs"
+        buttonText="Contact Us"
         alt="Business Hand Shake"
+        onClick={() => {
+          router.push("/contact");
+        }}
       />
       {
         <div className="flex flex-col gap-8">
@@ -91,7 +87,7 @@ export default function EmployersPage() {
               return <FeatureCard key={idx} {...args} />;
             })}
           </div>
-          <div className="flex md:flex-row flex-col justify-between">
+          <div className="flex md:flex-row flex-col justify-center">
             {rowTwoFeatureCardArgs.map((args, idx) => {
               // let {imageSource: src, altText: alt, cardTitle } = args;
               return <FeatureCard key={idx} {...args} />;

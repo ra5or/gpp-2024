@@ -3,7 +3,7 @@ import { FeatureCard, FeatureCardArgs } from "@components/feature-card";
 import { HeroImage } from "@components/hero-image";
 import employersImage from "@public/assets/employers-image.webp";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
-import router from "next/router";
+import { useRouter } from "next/router";
 
 const featureCardArgs: FeatureCardArgs[] = [
   {
@@ -33,6 +33,7 @@ const featureCardArgs: FeatureCardArgs[] = [
 ];
 
 export default function AboutPage() {
+  const router = useRouter();
   return (
     <div>
       <HeroImage

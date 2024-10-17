@@ -1,11 +1,13 @@
 import { ContactButton } from "@components/contact-button";
-import { FeatureCard } from "@components/feature-card";
 import { HeroImage } from "@components/hero-image";
 import candidatesImage from "@public/assets/candidates-hero-image.png";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
-import router from "next/router";
+import { useRouter } from "next/navigation";
+import { siteConfig } from "@config/site";
 
 export default function CandidatesPage() {
+  const router = useRouter();
+
   return (
     <div>
       <HeroImage
@@ -13,6 +15,11 @@ export default function CandidatesPage() {
         mainText="Candidates"
         subText="We Build Lasting Relationships Between Candidates & Businesses"
         alt="Job candidates"
+        showButton={true}
+        buttonText="Jobs"
+        onClick={() => {
+          router.push(siteConfig.links.jobsFeed);
+        }}
       />
       <div className="flex flex-col gap-8">
         <p className="text-center md:py-20 md:px-[15%] p-10 text-lg">
@@ -46,7 +53,7 @@ export default function CandidatesPage() {
             buttonText="Contact Us"
             textColor="white"
             className="mx-auto"
-            clickHandler={() => router.push("contact")}
+            clickHandler={() => router.push("/contact")}
           />
         </CardBody>
       </Card>

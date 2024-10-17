@@ -14,7 +14,7 @@ export default function ContactForm(props: ContactFormArgs) {
   const { shouldDisableButton } = props;
 
   return (
-    <div className="flex justify-center md:p-20 p-5">
+    <div className="flex justify-center md:p-[7%] p-5">
       <Image
         className="relative z-0 top-[-13rem] left-[0.5rem] hidden md:block"
         src={contactFormLines}

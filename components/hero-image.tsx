@@ -9,6 +9,7 @@ export const HeroImage = (props) => {
     subText,
     showButton = false,
     buttonText = "",
+    onClick,
   } = props;
   let buttonContents =
     showButton && buttonText ? (
@@ -16,6 +17,7 @@ export const HeroImage = (props) => {
         variant="flat"
         size="lg"
         className="bg-slide-blue/100 text-menu-color m-5 w-36 mx-auto font-semibold"
+        onPress={onClick}
       >
         {buttonText}
       </Button>

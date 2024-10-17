@@ -2,8 +2,6 @@
 
 import { Link } from "@nextui-org/link";
 
-import { link as linkStyles } from "@nextui-org/theme";
-
 import { siteConfig } from "@config/site";
 import NextLink from "next/link";
 import { usePathname } from "next/navigation";
@@ -21,8 +19,9 @@ import React from "react";
 
 export const Navigation = () => {
   let pathName = usePathname();
-  let menuColor = pathName === "/contact" ? "text-black" : "text-menu-color";
-  let iconColor = pathName === "/contact" ? "fill-black" : "fill-white";
+  let useBlack = pathName === "/contact" || pathName === "/privacy";
+  let menuColor = useBlack ? "text-black" : "text-menu-color";
+  let iconColor = useBlack ? "fill-black" : "fill-white";
 
   const [isMenuOpen, setIsMenuOpen] = React.useReducer(
     (current) => !current,
@@ -86,12 +85,12 @@ export const Navigation = () => {
               </Link>
             ))}
             <div className="flex pr-10 gap-3">
-              <Link isExternal href={siteConfig.links.discord} aria-label="X">
+              <Link isExternal href={siteConfig.links.x} aria-label="X">
                 <XSocialMediaIcon color={iconColor} />
               </Link>
               <Link
                 isExternal
-                href={siteConfig.links.github}
+                href={siteConfig.links.linkedIn}
                 aria-label="LinkedIn"
               >
                 <LinkedInIcon color={iconColor} />

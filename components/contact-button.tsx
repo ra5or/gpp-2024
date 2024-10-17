@@ -1,7 +1,5 @@
 import { GlobalColors } from "@types";
 import { Button } from "@nextui-org/button";
-import Link from "next/link";
-import router from "next/router";
 
 export type ButtonArgs = {
   type: "button" | "submit" | "reset" | undefined;

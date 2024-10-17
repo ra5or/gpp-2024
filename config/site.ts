@@ -21,10 +21,9 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui.org",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    jobsFeed: "https://oilandgasjobsearch.com/companies/515",
+    linkedIn:
+      "https://www.linkedin.com/company/gpp-recruitment-limited/jobs/?viewAsMember=true",
+    x: "https://discord.gg/9b6yyZKmH4",
   },
 };
